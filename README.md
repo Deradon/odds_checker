@@ -1,9 +1,5 @@
 # OddsChecker
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/odds_checker`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -20,9 +16,21 @@ Or install it yourself as:
 
     $ gem install odds_checker
 
-## Usage
+## Example
 
-TODO: Write usage instructions here
+```ruby
+result = OddsChecker.correct_score team_one: "france",
+                                   team_two: "romania",
+                                   tournament: "football/euro-2016"
+
+first_bet = result.bets.first
+
+first_bet.score
+# => #<OddsChecker::Score:0x00000002bff570 @team_one_goals=2, @team_two_goals=0>
+
+first_bet.probability
+# => 0.14534719455571096
+```
 
 ## Development
 
@@ -32,7 +40,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/odds_checker. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/Deradon/odds_checker. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License

@@ -1,4 +1,4 @@
-require "net/http"
+require "open-uri"
 require "nokogiri"
 
 module OddsChecker
@@ -86,7 +86,7 @@ module OddsChecker
       end
 
       def body
-        Net::HTTP.get(URI(url))
+        URI.parse(url).read
       end
     end
 

@@ -9,7 +9,7 @@ module OddsChecker
     end
 
     def tournament_url
-      "http://www.oddschecker.com/#{tournament}/"
+      "https://www.oddschecker.com/#{tournament}/"
     end
 
     def url

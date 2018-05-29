@@ -19,17 +19,17 @@ Or install it yourself as:
 ## Example
 
 ```ruby
-result = OddsChecker.correct_score team_one: "france",
-                                   team_two: "romania",
-                                   tournament: "football/euro-2016"
+result = OddsChecker.correct_score team_one: "russia",
+                                   team_two: "saudi-arabia",
+                                   tournament: "football/worldcup"
 
 first_bet = result.bets.first
 
 first_bet.score
-# => #<OddsChecker::Score:0x00000002bff570 @team_one_goals=2, @team_two_goals=0>
+# => #<OddsChecker::Score:0x00000002bff570 @team_one_goals=1, @team_two_goals=0>
 
 first_bet.probability
-# => 0.14534719455571096
+# => 0.15050833951324663
 ```
 
 ## Development
